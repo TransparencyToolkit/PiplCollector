@@ -3,13 +3,14 @@ require 'json'
 require 'pry'
 
 class PiplCollector
-  def initialize(input_dir, output_dir, output_append_dir, id_field, ignore_files, api_key, field_mapping)
+  def initialize(input_dir, output_dir, output_append_dir, id_field, ignore_files, api_key, field_mapping, geocoder_api_key)
     @input_dir = input_dir
     @output_dir = output_dir
     @output_append_dir = output_append_dir
     @id_field = id_field
     @ignore_files = ignore_files
     @api_key = api_key
+    @geocoder_api_key = geocoder_api_key
     @field_mapping = field_mapping
     @already_collected = load_output_files
   end
@@ -49,7 +50,7 @@ class PiplCollector
     sleep(1)
     
     # Get data from Pipl
-    p = PiplRequest.new(@api_key, @field_mapping)
+    p = PiplRequest.new(@api_key, @field_mapping, @geocoder_api_key)
     output = p.get_data(data_item)
 
     # Handle output

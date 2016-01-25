@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
-  s.name        = 'piplrcollector'
-  s.version     = '0.0.1'
-  s.date        = '2016-01-21'
+  s.name        = 'piplcollector'
+  s.version     = '0.0.2'
+  s.date        = '2016-01-25'
   s.summary     = 'Gets data from Pipl for dir of files'
   s.description = 'Gets data from Pipl for dir of files'
   s.authors     = ['M. C. McGrath']

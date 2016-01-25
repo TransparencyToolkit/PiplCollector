@@ -6,5 +6,5 @@ To run-
 1. gem install piplrequester piplcollector
 2. require piplcollector
 3. p = PiplCollector.new("input_data_dir_path", "output_data_dir_path", "output_append_data_dir_path", "profile_url", "_terms.json",
-"api_key", "field mapping hash (see piplrequest for instructions)")
+"api_key", "field mapping hash (see piplrequest for instructions)", "geocoder_api_key")
 p.run("input_data_dir_path")
