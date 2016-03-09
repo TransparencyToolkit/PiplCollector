@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'piplcollector'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2016-03-09'
   s.summary     = 'Gets data from Pipl for dir of files'
   s.description = 'Gets data from Pipl for dir of files'

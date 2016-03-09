@@ -42,7 +42,11 @@ class PiplCollector
 
   # Checks if it is already collected
   def was_collected?(data_item)
-    @already_collected.include?(gen_filename_from_id(data_item))
+    if data_item[@id_field]
+      return @already_collected.include?(gen_filename_from_id(data_item))
+    else
+      return true
+    end
   end
 
   # Get info on person from pipl
