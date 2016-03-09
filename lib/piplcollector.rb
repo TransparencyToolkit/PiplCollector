@@ -72,9 +72,9 @@ class PiplCollector
     # Go through each item in file
     data.each do |item|
       if !was_collected?(item)
-        item[:pipl] = get_person(item)
+        item[:pipl] = get_person(item) if item[@id_field]
       else
-        item[:pipl] = get_already_collected_person(item)
+        item[:pipl] = get_already_collected_person(item) if item[@id_field]
       end
       outfile.push(item)
     end
